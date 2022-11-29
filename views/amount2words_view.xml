@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="show_amount2words_view" model="ir.ui.view">
+		<field name="name">Show amount2words invoice</field>
+		<field name="model">account.move</field>
+		<field name="inherit_id" ref="account.view_move_form" />
+		<field name="arch" type="xml">
+			 <xpath expr = "//field[@name = 'narration']" position = "before" >
+				 <h2>
+					   <field name = "amount2words"  string="المبلغ كتابتا"/>
+				 </h2>
+
+			 </xpath>
+<!--				 <field name = "ref" position = "after" >-->
+<!--						   <field name = "amount2words"/>-->
+<!--				 </field>-->
+		</field>
+	</record>
+<!--	<record id="show_flag_amount2words_view" model="ir.ui.view">-->
+<!--		<field name="name">Show Flag amount2words invoice</field>-->
+<!--		<field name="model">account.move</field>-->
+<!--		<field name="inherit_id" ref="account.view_move_form" />-->
+<!--		<field name="arch" type="xml">-->
+<!--			 <field name = "ref" position = "after" >-->
+<!--					   <field name = "show_amount2words"/>-->
+<!--			 </field>-->
+<!--		</field>-->
+<!--	</record>-->
+</odoo>
