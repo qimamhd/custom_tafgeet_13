@@ -68,8 +68,8 @@ class xx_amount2words_sale_order(models.Model):
                 text += ' هلله '
                 text = text.replace(',', ' و ')
 
-                amount_text = 'عليكم ' + text.replace('،', ' و ')
-                return amount_text
+            amount_text = 'فقط ' + text.replace('،', ' و ')
+            return amount_text
 
 class xx_amount2words_payment(models.Model):
     _inherit = 'account.payment'
