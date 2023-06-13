@@ -31,14 +31,16 @@ class xx_amount2words(models.Model):
             if self.type in ('out_invoice', 'in_refund'):
                 text = text.replace(',', ' و ')
 
-                amount_text = 'عليكم ' + text.replace('،', ' و ')
+                # amount_text = 'عليكم ' + text.replace('،', ' و ')
+                amount_text = text.replace('،', ' و ')
                 return amount_text
             else:
 
                 if self.type in ('in_invoice', 'out_refund'):
                     text = 'لكم ' + text.replace(',', ' و ')
 
-                    amount_text = 'لكم ' + text.replace('،', ' و ')
+                    # amount_text = 'لكم ' + text.replace('،', ' و ')
+                    amount_text =  text.replace('،', ' و ')
                     return amount_text
 
 
