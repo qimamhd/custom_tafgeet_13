@@ -100,12 +100,14 @@ class xx_amount2words_payment(models.Model):
             if self.payment_type in ('inbound'):
                 text = text.replace(',', ' و ')
 
-                amount_text = 'عليكم ' + text.replace('،', ' و ')
+                # amount_text = 'عليكم ' + text.replace('،', ' و ')
+                amount_text = text.replace('،', ' و ')
                 return amount_text
             else:
 
                 if self.payment_type in ('outbound'):
                     text = 'لكم ' + text.replace(',', ' و ')
 
-                    amount_text = 'لكم ' + text.replace('،', ' و ')
+                    # amount_text = 'لكم ' + text.replace('،', ' و ')
+                    amount_text = text.replace('،', ' و ')
                     return amount_text
